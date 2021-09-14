@@ -1,0 +1,16 @@
+<div>
+  <swiper
+    [spaceBetween]="30"
+    [effect]="'fade'"
+    [navigation]="false"
+    [pagination]="{clickable: true, type: 'bullets'}"
+  >
+    <ng-template swiperSlide *ngFor="let pic of selectedPicturesURI">
+      <img [src]="pic" />
+    </ng-template>
+  </swiper>
+
+  <button (click)="dismiss()">
+    CANCEL
+  </button>
+</div>
