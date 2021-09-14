@@ -2,22 +2,14 @@ import { Component, ViewEncapsulation } from "@angular/core";
 import { ModalController } from "@ionic/angular";
 
 import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper";
-import { AddPostModal } from "./add-post.modal";
+import {AddPostModal} from "./add-post-modal/add-post.modal";
+
 
 SwiperCore.use([EffectFade, Navigation, Pagination]);
 
 @Component({
-  selector: "app-swiper-example",
-  template: `<button (click)="openModal()"><span>Open modal</span></button>
-    <swiper
-      [spaceBetween]="30"
-      [effect]="'fade'"
-      [navigation]="false"
-      [pagination]="{ clickable: true, type: 'bullets' }"
-      class="mySwiper"
-      ><ng-template swiperSlide *ngFor="let pic of selectedPicturesURI"
-        ><img [src]="pic" /></ng-template
-    ></swiper>`,
+  selector: "app-root",
+  templateUrl: 'app.html',
   styleUrls: ["./app.components.scss"],
   encapsulation: ViewEncapsulation.None
 })

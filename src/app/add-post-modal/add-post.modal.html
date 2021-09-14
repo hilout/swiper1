@@ -1,0 +1,17 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar class="ion-no-padding">
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-no-padding">
+    <div class="div-content">
+        <div class="swiper-div">
+            <ion-slides pager="true" [options]="slideOpts">
+
+                <ion-slide *ngFor="let pic of selectedPicturesURI">
+                    <img [src]="pic"/>
+                </ion-slide>
+            </ion-slides>
+        </div>
+        <button (click)="dismiss()"><span>Close modal</span></button>
+    </div>
+</ion-content>

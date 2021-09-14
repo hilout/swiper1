@@ -1,0 +1,19 @@
+<ion-app>
+    <ion-header>
+
+    </ion-header>
+    <ion-content>
+        <div class="swiper-div">
+        <swiper
+                [spaceBetween]="30"
+                [effect]="'fade'"
+                [navigation]="false"
+                [pagination]="{ clickable: true, type: 'bullets' }"
+                class="mySwiper">
+            <ng-template swiperSlide *ngFor="let pic of selectedPicturesURI">
+                <img [src]="pic"/></ng-template>
+        </swiper>
+        </div>
+        <button (click)="openModal()"><span>Open modal</span></button>
+    </ion-content>
+</ion-app>
